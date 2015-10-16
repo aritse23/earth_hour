@@ -1,0 +1,50 @@
+body {
+	margin: 0 auto;
+	padding: 0 auto;
+	background-color: black;
+}
+
+.earth img{
+	position: absolute;
+	width: 100%;
+	top: 75%;
+
+}
+
+.earth {
+	height: 100vh;
+	background: url(../img/earth_day.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+
+}
+
+
+
+
+@-webkit-keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.earth {
+	-webkit-animation: spin 60s infinite;
+	animation: spin 60s infinite;
+}
