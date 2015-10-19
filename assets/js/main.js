@@ -31,7 +31,7 @@ $( document ).ready(function() {
         + minutes + '</span>:<span class="seconds">' + seconds + '</span>';  
      
     }, 1000);
-// ==========Set grayscale when clicking switch=========
+// ==========Set grayscale when clicking OFF=========
     $(".switch_off").click(function(){
         $(".grayscale").css({
             "-webkit-filter":"grayscale(100%)",
@@ -39,25 +39,45 @@ $( document ).ready(function() {
             "filter":"gray",
             "transition":"all 1s ease-in-out"
         });
-        $(".nav_bar").show(200);        
+        $(".nav_modal").delay(1000).animate({
+            opacity:1,
+            top:0         
+        },"slow");
+        $(".nav_bar").delay(1500).animate({
+            opacity:1,
+            top:0
+        },"slow");     
+    });    
+    // ===========Click Nav Button==========
+    $(".nav_bar a").click(function(){
+        $(".nav_modal").delay(1500).animate({
+            opacity:0,
+            top:-1000         
+        },"slow");
+        $(".nav_bar").delay(1000).animate({
+            opacity:0,
+            top:-1000
+        },"slow");
     });
-    $(".switch_on").click(function(){
+// ================Click Home button=====================
+    $(".home_butt").click(function(event){
+        event.preventDefault();
         $(".grayscale").css({
-            "-webkit-filter":"grayscale(0)",
-            "filter":"grayscale(0)",
+            "-webkit-filter":"grayscale(0%)",
+            "filter":"grayscale(0%)",
             "filter":"gray",
-            "transition":"all 1s ease-in-out"
+            "transition":"all 5s ease-in-out"
         });
-        $(".nav_bar").hide(200);       
-    });
-
+    })
 // ================Click About button=====================
-    $(".about_butt").click(function(){
+    
+    
+    $(".about_butt").click(function(event){
+        event.preventDefault();
         $(".about").delay(800).animate({
             opacity:1,
             left:0
         },"slow");
-        $(".nav_bar").hide(200);
     });
 
 // ===============Click Exit Button=================
@@ -66,6 +86,13 @@ $( document ).ready(function() {
             opacity:0,
             left:-750
         },"slow");
-        $(".nav_bar").show(200);
+        $(".nav_modal").delay(1000).animate({
+            opacity:1,
+            top:0         
+        },"slow");
+        $(".nav_bar").delay(1500).animate({
+            opacity:1,
+            top:0
+        },"slow");
     })
 });
