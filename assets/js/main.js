@@ -46,13 +46,13 @@ $(document ).ready(function() {
         $(".nav_bar").delay(1500).animate({
             opacity:1,
             top:0
-        },"slow");     
-    });    
+        },"slow");
+    });
     // ===========Click Nav Button==========
     $(".nav_bar a").click(function(){
         $(".nav_modal").delay(800).animate({
             opacity:0,
-            top:-1000         
+            top:-1000
         },"slow");
         $(".nav_bar").delay(400).animate({
             opacity:0,
