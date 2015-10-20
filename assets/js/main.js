@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+$(document ).ready(function() {
 
     // set the date we're counting down to
     var target_date = new Date('Mar, 19, 2016,20:30:00').getTime();
@@ -50,11 +50,11 @@ $( document ).ready(function() {
     });    
     // ===========Click Nav Button==========
     $(".nav_bar a").click(function(){
-        $(".nav_modal").delay(1500).animate({
+        $(".nav_modal").delay(800).animate({
             opacity:0,
             top:-1000         
         },"slow");
-        $(".nav_bar").delay(1000).animate({
+        $(".nav_bar").delay(400).animate({
             opacity:0,
             top:-1000
         },"slow");
@@ -68,7 +68,7 @@ $( document ).ready(function() {
             "filter":"gray",
             "transition":"all 5s ease-in-out"
         });
-    })
+    });
 // ================Click About button=====================
     
     
@@ -80,19 +80,47 @@ $( document ).ready(function() {
         },"slow");
     });
 
-// ===============Click Exit Button=================
-    $(".exit").click(function(){
-        $(".about").delay(800).animate({
+    // ===============Click Exit Button in About=================
+    $(".exit_about").click(function(){
+        $(".about").delay(400).animate({
             opacity:0,
             left:-750
         },"slow");
-        $(".nav_modal").delay(1000).animate({
+        $(".nav_modal").delay(800).animate({
             opacity:1,
             top:0         
         },"slow");
-        $(".nav_bar").delay(1500).animate({
+        $(".nav_bar").delay(1200).animate({
             opacity:1,
             top:0
         },"slow");
-    })
+    });
+
+// ================Click How button=====================
+    
+    
+    $(".how_butt").click(function(event){
+        event.preventDefault();
+        $(".how").delay(800).animate({
+            opacity:1,
+            left:0
+        },"slow");
+    });
+
+// ===============Click Exit Button in How=================
+    $(".exit_how").click(function(){
+        $(".how").delay(400).animate({
+            opacity:0,
+            left:-750
+        },"slow");
+        $(".nav_modal").delay(800).animate({
+            opacity:1,
+            top:0         
+        },"slow");
+        $(".nav_bar").delay(1200).animate({
+            opacity:1,
+            top:0
+        },"slow");
+    });
+
 });
