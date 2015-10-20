@@ -1,0 +1,11 @@
+Design
+===========
+
+- Use outline for Turn , power
+- Use a Slanted font for Off
+
+General
+===========
+
+- Media Queries
+- Responsive Images

@@ -7,11 +7,18 @@
 	}
 
 	/*=================================*/
+	/*==========HEADER===========*/
+	.header {
+		display: flex;
+	}
+	/*===================================*/
 	/*==========ICONS BAR===========*/
 	.icons_bar img {
-		width: 100px;
+		
+		max-width: 100%;
 		display: inline-block;
 		border-right: 1px solid #fff;
+		align: right;
 	}
 	/*===================================*/
 	/*==============DATE==============*/
@@ -19,6 +26,7 @@
 		font-family: 'Oswald', sans-serif;
 		color: #fff;
 		vertical-align: middle;
+		margin-left: 35px;
 	}
 	.date h2 {
 		font-size: 18px;
@@ -29,12 +37,6 @@
 		font-weight: 400;
 	}
 	/*=================================*/
-
-	
-	/*============GAP===========*/
-	
-	
-	/*==================================*/
 
 	/*===========JUMBOTRON==========*/
 	.jumbotron {
@@ -65,14 +67,29 @@
 		color: #fff;
 		font-size: 45px;
 		margin-bottom: 0;
-		padding: 0;
+		padding: 0;		
 	}
+	.turn,.power,.for {
+		text-shadow:
+		   -1px -1px 6px #aaa,  
+		    1px -1px 6px #aaa,
+		    -1px 1px 6px #aaa,
+		     1px 1px 6px #aaa;
+	}
+
 	.switch_off{
 		color: #7FD114;
 		font-size: 60px;
 		font-style: italic;
 		text-decoration: underline;
 	}
+	.switch_off:hover{
+		color: #68AB10
+	}
+	.switch_off:active{
+		color: #68AB10
+	}
+
 	.for{
 		font-family: 'Crimson Text', serif;
 		color: #fff;
@@ -102,7 +119,7 @@
 		font-family: 'Open Sans Condensed', sans-serif;
 		font-weight: 300;
 		font-size: 20px;
-		color: #fff;
+		color: #FF8800;
 		border-top: 1px solid #fff;
 		border-bottom: 1px solid #fff;
 		padding: 0.25em;
@@ -137,6 +154,8 @@
 		height: 100vh;
 		top: -1000px;
 		z-index: 3500;
+		display: flex;
+		justify-content: center;
 	}
 	.nav_bar ul{
 		position: absolute;
@@ -145,6 +164,7 @@
 		top: 15%;
 		left: 10%;
 		width: 80%;
+		max-width: 500px;
 		padding: 0;
 		margin: 0;
 		height: 70%;
@@ -158,11 +178,11 @@
 		text-decoration: none;
 	}
 	.nav_bar a:hover{
-		background: rgba(255,255,255,0.6);
-		transition: all 2s ease-in-out;
+		background: #7FD114;
+		transition: all 0.5s ease-in-out;
 	}
 	.nav_bar a:active{
-		background: #7FD114;
+		background: #68AB10;
 	}
 	.nav_bar li{
 		padding-top: 5px;
@@ -210,6 +230,44 @@
 		text-align: justify;
 	}
 	/*====================================*/
+	/*==============HOW=============*/
+	.how {
+		font-family: Helvetica,Arial,Sans-serif;
+		position: absolute;
+		background: rgba(0,0,0,0.8);
+		left: -750px;
+		top: 0;
+		overflow: auto;
+		width: 100vw;
+		height: 100vh;
+		opacity: 0;
+		z-index: 5000;
+	}
+
+	.how img {
+		position: absolute;
+		right: 10%;
+		margin-top: 15%;
+		width: 35px;
+	}
+	
+	.how p,
+	.how h1{		
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+
+	.how h1{
+		margin-top: 15%;
+		font-weight: 700;
+		color: #00AAD1;
+	}
+	.how p{
+		margin-top: 10%;
+		color: #eee;
+		text-align: justify;
+	}
+	/*====================================*/
 	/*=============EARTH ANIMATIONS==================*/
 	@-webkit-keyframes spin {
 		from {
@@ -241,155 +299,25 @@
 /********************************************
 ===========MEDIA QUERIES============
 *********************************************/
-@media screen and (min-width:480px) and (max-width: 767px){
+/* Small devices (tablets between 768px and 992px) */
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+	
+}
+/* Medium devices (desktops between 992px and 1200px) */
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
 
-	/*==========GENERIC=========*/
-	body {
-		font-family: Helvetica,Arial,Sans-serif;
-		margin: 0 auto;
-		padding: 0 auto;
-		background-color: black;
-	}
+}
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) {
 
-	/*=================================*/
-	/*==========ICONS BAR===========*/
-	.icons_bar img {
-		display: inline-block;
-		border-right: 1px solid #fff;
-	}
-	/*===================================*/
-	/*==============DATE==============*/
-	.date h2,h4 {
-		font-family: 'Oswald', sans-serif;
-		color: #fff;
-	}
-	.date h2 {
-		font-size: 35px;
-		font-weight: 700;
-	}
-	.date h4 {
-		font-size: 25px;
-		font-weight: 400;
-	}
-	/*=================================*/
-	/*==========NAV BAR============*/
+}
 
-	.nav_bar ul {
-		font-size: 30px;
-		font-weight: 700;
-		background: none;
-	}
-	.nav_bar ul a {
-		background: none;
-	}
-	.nav_bar ul a:hover{
-		color: #fff;
-		background: none;
-	}
-	.nav_bar ul a:focus{
-		background: none;
-	}
-	.nav-pills>li>a {
-		background: none;
-	}
-	.nav-pills>li.active>a, .nav-pills>li.active>a:hover {
-	    color: #fff;
-	    text-decoration: underline;
-	    background: none;
-	}
-	/*==================================*/
 
-	/*===========JUMBOTRON==========*/
-	.jumbotron{
-		position: absolute;
-		padding-top: 5%;
-	}
-	.jumbotron h1{
-		font-family: Helvetica,Arial,Sans-serif;
-		color: #fff;
-		font-weight: 700;
-		padding-bottom: 0.25em;
-	}
-	.jumbotron p{
-		font-family: Helvetica,Arial,Sans-serif;
-		color: #fff;
-	}
-	.earth img{
-		position: absolute;
-		width: 50%;
-		left: 25%;
-	}
-	.row{
-		height: 75%;
-	}
-	.jumbotron {
-		margin-top: 10%;
-		position: absolute;
-		left: 25%;
-		width: 50%;
-		z-index: 2000;
-		text-align: center;
-		background:none;
-	}
-
-	.jumbotron hr{
-		width: 20%;
-		border: none;
-		height: 10px;
-		background: #fff;
-
-	}
-
-	.timer {
-		position: relative;
-		/*font-family: 'Keania One', cursive;*/
-		font-size: 85px;
-		width: 100%;	
-		color: #fff;
-		border-top: 1px solid #fff;
-		border-bottom: 1px solid #fff;
-		padding: 0.25em;
-	}
-	.seconds {
-		color: #7FD114;
-	}
-	.btn-primary {
-		margin-top: 1em;
-		background-color: #337ab7;
-		font-size: 50px;
-	}
-	/*===================================*/
-
-	/*=============EARTH ANIMATIONS==================*/
-	@-webkit-keyframes spin {
-		from {
-			transform: rotate(0deg);
-		}
-		to {
-			transform: rotate(360deg);
-		}
-	}
-
-	@keyframes spin {
-		from {
-			transform: rotate(0deg);
-		}
-		to {
-			transform: rotate(360deg);
-		}
-	}
-	.rotate {
-		-webkit-animation: spin 60s infinite;
-		animation: spin 60s infinite;
-	}
-	/*=======================================*/
-	/*========SWITCH GRAYSCALE EFFECT==========*/
-
-	/*==========================================*/
+/*@media screen and (min-width:480px) and (max-width: 767px){	
 }
 @media screen and (min-width:768) and (max-width: 979px){
 }
 @media screen and (min-width:980px) and (max-width: 1023px){
 }
 @media screen and (min-width:1024px){
-}
+}*/
