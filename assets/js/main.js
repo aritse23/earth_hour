@@ -84,7 +84,7 @@ $(document ).ready(function() {
     $(".exit_about").click(function(){
         $(".about").delay(400).animate({
             opacity:0,
-            left:-750
+            left:-2000
         },"slow");
         $(".nav_modal").delay(800).animate({
             opacity:1,
@@ -111,7 +111,7 @@ $(document ).ready(function() {
     $(".exit_how").click(function(){
         $(".how").delay(400).animate({
             opacity:0,
-            left:-750
+            left:-2000
         },"slow");
         $(".nav_modal").delay(800).animate({
             opacity:1,
