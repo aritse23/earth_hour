@@ -2,7 +2,7 @@
 body {
 	font-family: Helvetica,Arial,Sans-serif;
 	margin: 0 auto;
-	padding: 0 auto;
+	padding: 0;
 	background-color: black;
 }
 
@@ -103,6 +103,7 @@ body {
 .for{
 	font-family: 'Crimson Text', serif;
 	color: #fff;
+	font-style: italic;
 	font-weight: 600;
 	font-size: 20px;
 }
@@ -312,9 +313,6 @@ h1.earth_hour{
 		font-size: 20px;		
 	}
 /*==============JUMBOTRON================*/
-	.jumbotron {
-		position: fixed;
-	}
 	.timer {
 		padding-top: 9px;
 		padding-bottom: 9px;
