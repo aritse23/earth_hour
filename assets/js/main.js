@@ -33,16 +33,19 @@ $(document ).ready(function() {
     }, 1000);
 // ==========Set grayscale when clicking OFF=========
     $(".switch_off").click(function(){
+        //adjusts grayscale value via css filter to show a "turn off" effect
         $(".grayscale").css({
             "-webkit-filter":"grayscale(100%)",
             "filter":"grayscale(0%)",
             "filter":"gray",
             "transition":"all 1s ease-in-out"
         });
+        //after delay, slides the modal background down slowly
         $(".nav_modal").delay(1000).animate({
             opacity:1,
             top:0         
         },"slow");
+        //after delay, slides nav buttons down slowly
         $(".nav_bar").delay(1500).animate({
             opacity:1,
             top:0
@@ -50,10 +53,12 @@ $(document ).ready(function() {
     });
     // ===========Click Nav Button==========
     $(".nav_bar a").click(function(){
+        //after clicking on a nav, modal slides upwards and not visible
         $(".nav_modal").delay(800).animate({
             opacity:0,
             top:-1000
         },"slow");
+        //after clicking on a nav, nav buttons slides upwards and not visible
         $(".nav_bar").delay(400).animate({
             opacity:0,
             top:-1000
@@ -61,6 +66,7 @@ $(document ).ready(function() {
     });
 // ================Click Home button=====================
     $(".home_butt").click(function(event){
+        //clicking home button changes the grayscale value back to 0 so color will be visible again
         event.preventDefault();
         $(".grayscale").css({
             "-webkit-filter":"grayscale(0%)",
@@ -69,27 +75,31 @@ $(document ).ready(function() {
             "transition":"all 5s ease-in-out"
         });
     });
-// ================Click About button=====================
+// ================Click Who button=====================
     
     
-    $(".about_butt").click(function(event){
+    $(".about_butt").click(function(event){        
         event.preventDefault();
+        //slides Who section from the left of screen
         $(".about").delay(800).animate({
             opacity:1,
             left:0
         },"slow");
     });
 
-    // ===============Click Exit Button in About=================
+    // ===============Click Exit Button in Who=================
     $(".exit_about").click(function(){
+        //clicking exit slides the Who section back to the left and invisible
         $(".about").delay(400).animate({
             opacity:0,
             left:-2000
         },"slow");
+        //then delays and slides down modal
         $(".nav_modal").delay(800).animate({
             opacity:1,
             top:0         
         },"slow");
+        //then slides down nav buttons
         $(".nav_bar").delay(1200).animate({
             opacity:1,
             top:0
@@ -101,6 +111,7 @@ $(document ).ready(function() {
     
     $(".how_butt").click(function(event){
         event.preventDefault();
+        //slides How section from the left of screen
         $(".how").delay(800).animate({
             opacity:1,
             left:0
@@ -109,14 +120,17 @@ $(document ).ready(function() {
 
 // ===============Click Exit Button in How=================
     $(".exit_how").click(function(){
+        //clicking exit slides the How section back to the left and invisible
         $(".how").delay(400).animate({
             opacity:0,
             left:-2000
         },"slow");
+        //then delays and slides down modal
         $(".nav_modal").delay(800).animate({
             opacity:1,
             top:0         
         },"slow");
+        //then slides down nav buttons
         $(".nav_bar").delay(1200).animate({
             opacity:1,
             top:0

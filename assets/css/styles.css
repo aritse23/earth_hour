@@ -6,12 +6,11 @@ body {
 	background-color: black;
 }
 
-/*=================================*/
 /*==========HEADER===========*/
 .header {
 	display: flex;
 }
-/*===================================*/
+
 /*==========ICONS BAR===========*/
 .icons_bar img {
 	
@@ -19,7 +18,7 @@ body {
 	display: inline-block;
 	border-right: 1px solid #fff;
 }
-/*===================================*/
+
 /*==============DATE==============*/
 .date h2,h4 {
 	font-family: 'Oswald', sans-serif;
@@ -38,7 +37,7 @@ body {
 	font-size: 12px;
 	font-weight: 400;
 }
-/*=================================*/
+
 /*==============EARTH================*/
 .earth img{
 	position: absolute;
@@ -46,7 +45,6 @@ body {
 	left: 20%;
 	margin-top: 10px;
 }
-/*===================================*/
 
 /*===========JUMBOTRON==========*/
 .jumbotron {
@@ -140,7 +138,7 @@ h1.earth_hour{
 	z-index: 3000;
 	border-radius: 0;
 }
-/*===================================*/
+
 /*============NAV MODAL==============*/
 .nav_modal {
 	font-family: Helvetica,Arial,Sans-serif;
@@ -197,8 +195,7 @@ h1.earth_hour{
 	border: 1px solid #fff;
 }
 
-/*==================================*/
-/*==============ABOUT=============*/
+/*==============WHO=============*/
 .about {
 	font-family: Helvetica,Arial,Sans-serif;
 	position: absolute;
@@ -235,7 +232,7 @@ h1.earth_hour{
 	text-align: justify;
 	margin-top: 2em;
 }
-/*====================================*/
+
 /*==============HOW=============*/
 .how {
 	font-family: Helvetica,Arial,Sans-serif;
@@ -273,7 +270,7 @@ h1.earth_hour{
 	color: #eee;
 	text-align: justify;
 }
-/*====================================*/
+
 /*=============EARTH ANIMATIONS==================*/
 @-webkit-keyframes spin {
 	from {
@@ -296,10 +293,12 @@ h1.earth_hour{
 	-webkit-animation: spin 60s infinite;
 	animation: spin 60s infinite;
 }
-/*=======================================*/
+
+
 /********************************************
 ===========MEDIA QUERIES============
 *********************************************/
+/*if screen larger than 768px*/
 @media screen and (min-width: 768px){
 /*===============HEADER==============*/
 	.icons_bar img {		
@@ -320,8 +319,6 @@ h1.earth_hour{
 
 }
 
-@media screen and (min-width:500px) and (max-width: 768px) {
-}
 /* Small devices (tablets between 768px and 992px) */
 @media screen and (min-width: 768px) and (max-width: 992px) {
 	
@@ -333,7 +330,7 @@ h1.earth_hour{
 	h1.earth_hour {
 		margin-bottom: 25px;
 	}
-/*================ABOUT=============*/
+/*================WHO=============*/
 	.about {	
 		left: -2000px;
 	}
